@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.6/engine/Shopware/Components/Plugin/schema/plugin.xsd">
+	<label lang="de">Erfassung des Lagerortes bei einem Artikel und Ausgabe von diesem bei den Bestellpositionen</label>
+    <label lang="en">Recording of the storage location at an article and output them at the order items</label>
+    <version>1.0.0</version>
+    <copyright>Sebastian Schreier</copyright>
+    <license>proprietary</license>
+    <link>https://www.sebastianschreier.de</link>
+    <author>Sebastian Schreier</author>
+    <supplier>Sebastian Schreier</supplier>
+    <compatibility minVersion="5.2.13" />
+	<changelog version="1.0.0">
+		<changes>
+			<![CDATA[
+				Initial release of the plugin
+			]]>
+		</changes>
+		<changes lang="de">
+			<![CDATA[
+				Erstveröffentlichung des Plugins
+			]]>
+		</changes>
+	</changelog>
+	<description>
+		<![CDATA[
+			<p>A plugin for recording the storage location at an article and output them at the order items. The storage location of an article can be entered in an own backend module, for example, in the format "Storage | Row | Rack | Pitch no." and will be assigned to the respective article via a selection field. The storage location of an article in the order views is always read from the article data and is therefore always up to date. Likewise, analogous to the invoice document or the delivery note, the pick list document can be generated, which, in addition to the customer data, contains the article number, the article name, the article quantity and the storage location of the ordered article.</p>
+		]]>
+	</description>
+	<description lang="de">
+		<![CDATA[	
+			<p>Ein Plugin zum Erfassen des Lagerortes bei einem Artikel und der Ausgabe von diesem bei den Bestellpositionen. Der Lagerort eines Artikels kann dabei in einem eigenen Backendmodul beispielsweise im Format "Lager | Reihe | Regal | Stellplatz-Nr." eingegeben werden und wird dem jeweiligen Artikel über ein Auswahlfeld zugewiesen. Der Lagerort eines Artikels wird bei den Bestellungsansichten immer aus den Artikelstammdaten ausgelesen und ist dadurch immer aktuell. Ebenso kann man sich analog zum Rechnungsdokument oder zum Lieferschein das Dokument Laufzettel (Pickliste) erzeugen lassen, das neben den Kundendaten die Artikelnummer, den Artikelnamen, die Anzahl und den Lagerort der bestellten Artikel enthält.</p>
+		]]>
+	</description>
+</plugin>
