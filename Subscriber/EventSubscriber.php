@@ -2,11 +2,22 @@
   namespace sschreierStoragelocationsw5\Subscriber;
 
   use Enlight\Event\SubscriberInterface;
+  use Psr\Container\ContainerInterface;
 
   class EventSubscriber implements SubscriberInterface {
-     private $pluginDirectory;
+    private $pluginDirectory;
 
-     public static function getSubscribedEvents(){
+    /**
+     * @var ContainerInterface
+     */
+    private $container;
+
+    public function __construct($pluginName, $pluginDirectory, ContainerInterface $container){
+      $this->pluginDirectory = $pluginDirectory;
+      $this->container = $container;
+    }
+
+    public static function getSubscribedEvents(){
       return [
         'Enlight_Controller_Dispatcher_ControllerPath_Backend_Faqtabelement' => 'controllerPathBackendFaqtabelement',
         'Enlight_Controller_Action_PostDispatch_Backend' => 'postDispatchBackend',
@@ -15,10 +26,6 @@
         'Shopware_Components_Document::assignValues::after' => 'afterDocumentAssignValues',
         'Theme_Inheritance_Template_Directories_Collected' => 'collectedTemplateDirectories'
       ];
-    }
-
-    public function __construct($pluginName, $pluginDirectory){
-      $this->pluginDirectory = $pluginDirectory;
     }
 
     public function controllerPathBackendFaqtabelement(){

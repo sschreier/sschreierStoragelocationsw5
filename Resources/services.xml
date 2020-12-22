@@ -4,10 +4,11 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="sschreier_storagelocationsw5.subscriber.eventsubscriber" class="sschreierStoragelocationsw5\Subscriber\EventSubscriber" public="true">
-		        <argument>%sschreier_storagelocationsw5.plugin_name%</argument>
-		        <argument>%sschreier_storagelocationsw5.plugin_dir%</argument>
+		    <argument>%sschreier_storagelocationsw5.plugin_name%</argument>
+		    <argument>%sschreier_storagelocationsw5.plugin_dir%</argument>
+		    <argument type="service" id="service_container" />
 
-		        <tag name="shopware.event_subscriber" />
-		    </service>
+		    <tag name="shopware.event_subscriber" />
+		</service>
     </services>
 </container>
